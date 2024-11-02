@@ -1,6 +1,76 @@
+@font-face{
+    font-family: KaiseiTokumin;
+    src: url(../fonts/KaiseiTokumin-Medium.ttf);
+}
+
+
 /*--------------------------BODY-------------------------------*/
 
 body, html {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
     background: #EBE3D7;
     color:  #C1AC96;
+
+    font-family: KaiseiTokumin;
 }
+
+
+
+/*--------------------------HERO-------------------------------*/
+.hero{
+    /*2 heights are specified, the first height uses the SVH units for small viewport height
+    which is used for mobile devices that have address bars that hides on scroll*/
+    height: 100svh;
+    height: 100vh; 
+
+    background: url("../images/home1.jpg");
+    background-size: cover;
+
+}
+
+
+/*--------------------------ABOUT-------------------------------*/
+
+
+
+
+
+/*--------------------------GALLERY-------------------------------*/
+
+
+
+
+
+
+/*--------------------------AMENITIES-------------------------------*/
+
+
+
+
+
+
+/*--------------------------THINGS TO DO-------------------------------*/
+
+
+
+
+
+
+
+/*--------------------------BOOKING-------------------------------*/
+
+
+
+
+
+/*--------------------------CONTACT-------------------------------*/
+
+
+
+
+
+
+
