@@ -16,14 +16,6 @@ accents*/
 }
 
 /*--------------------------BODY-------------------------------*/
-
-body {
-    outline: 1px solid red;
-}
-* {
-    outline: 1px solid purple; /* Highlight all elements to find the culprit */
-}
-
 body, html {
     /*Settings defaults values for the page*/
     box-sizing: border-box;
