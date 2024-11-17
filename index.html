@@ -25,22 +25,17 @@
 </head>
 
 <!-- Body contains all the visible content of the webpage, subdivided in different sections -->
-
 <body>
     <main>
         <section class="hero">
             <div class="overlay">
-                <img class="hero-logo" src="images/logo/logo.svg" alt="Lilac Valley Farm Stay logo" />
-
-                <a href="#about">Explore</a>
+                <img class="hero-logo" src="images/logo/logo.svg" alt="Lilac Valley Farm Stay logo">
+                <a href="#about" class="explore-button">Explore<img class="explore-icon" src="images/icons/chevron-down.svg" alt="Lilac Valley Farm Stay logo"></a>
             </div>
-
-
-
-
         </section>
 
         <section class="about" id="about">
+            <hr class="separator">
             <h2>About</h2>
 
             <div class="about-grid">
@@ -62,9 +57,9 @@
                     Highly sought after and featured in several online travel and lifestyle articles, this dream retreat
                     is waiting
                     for you!
-                </div>
-
+                </div>              
             </div>
+            <hr class="separator">
         </section>
 
 
@@ -73,71 +68,69 @@
                 <h2>Gallery</h2>
             </div>
 
-
-
             <div class="gallery-scroller snaps-inline">
                 <div class="gallery-element">
-                    <img src="images/property/home-8.jpg" alt="DESCRIPTION" />
+                    <img src="images/property/home-8.jpg" alt="DESCRIPTION" >
                 </div>
                 <div class="gallery-element">
-                    <img src="images/property/home-7.jpg" alt="DESCRIPTION" />
+                    <img src="images/property/home-7.jpg" alt="DESCRIPTION" >
                 </div>
                 <div class="gallery-element">
-                    <img src="images/property/home-6.jpg" alt="DESCRIPTION" />
+                    <img src="images/property/home-6.jpg" alt="DESCRIPTION" >
                 </div>
                 <div class="gallery-element">
-                    <img src="images/property/home-4.jpg" alt="DESCRIPTION" />
+                    <img src="images/property/home-4.jpg" alt="DESCRIPTION" >
                 </div>
                 <div class="gallery-element">
-                    <img src="images/property/home-3.jpg" alt="DESCRIPTION" />
+                    <img src="images/property/home-3.jpg" alt="DESCRIPTION" >
                 </div>
                 <div class="gallery-element">
-                    <img src="images/property/home-2.jpg" alt="DESCRIPTION" />
+                    <img src="images/property/home-2.jpg" alt="DESCRIPTION" >
                 </div>
                 <div class="gallery-element">
-                    <img src="images/property/home-1.jpg" alt="DESCRIPTION" />
+                    <img src="images/property/home-1.jpg" alt="DESCRIPTION" >
                 </div>
             </div>
-
         </section>
 
         <section class="amenities" id="amenities">
             <div class="amenities-grid">
                 <div class="image-container">
-                    <img class="amenities-image" src="images/property/home-5.jpg" alt="DESCRIPTION" />
+                    <img class="amenities-image" src="images/property/home-5.jpg" alt="DESCRIPTION" >
                 </div>
-
 
                 <div class="amenities-info">
                     <h2>Amenities</h2>
 
                     <p class="description">Fully equipped to cater your needs in absolute comfort and luxury.</p>
 
-                    <hr class="separator" />
+                    <hr class="separator">
 
                     <div class="info-tiles">
                         <div class="info-tile">
-                            <img src="images/icons/guests.svg" class="amenities-icons" alt="DESCRIPTION" />
+                            <img src="images/icons/guests.svg" class="amenities-icons" alt="DESCRIPTION" >
                             <p>Up to 6 guests</p>
                         </div>
                         <div class="info-tile">
-                            <img src="images/icons/bed.svg" class="amenities-icons" alt="DESCRIPTION" />
+                            <img src="images/icons/bed.svg" class="amenities-icons" alt="DESCRIPTION" >
                             <p>3 bedrooms</p>
                         </div>
                         <div class="info-tile">
-                            <img src="images/icons/bath.svg" class="amenities-icons" alt="DESCRIPTION" />
+                            <img src="images/icons/bath.svg" class="amenities-icons" alt="DESCRIPTION" >
                             <p>2 bathrooms</p>
                         </div>
                     </div>
 
-                    <hr class="separator" />
+                    <hr class="separator">
                     
                     <ul class="amenities-list">
                         <li>King size master bedroom with ensuite</li>
                         <li>Two charming bedrooms with bunk beds</li>
                         <li>Ducted heating and cooling for year round comfort</li>
                         <li>Modern kitchen with appliances</li>
-                        <br>
+                    </ul>
+
+                    <ul class="amenities-list">
                         <li>Four acres of peaceful private land</li>
                         <li>Hand feed friendly farm animals</li>
                         <li>Private heated plunge pool</li>
@@ -145,17 +138,9 @@
                         <li>Cozy fireplace for chilly nights</li>
                     </ul>
 
-
                     <a href="#booking" class="right-align booking-btn">Book Now</a>
-
-                </div>          
- 
-            </div>
-            
-
-
-
-
+                </div>
+            </div>   
         </section>
 
         <section class="things-to-do">
@@ -163,43 +148,74 @@
                 <h2>Things to do</h2>
             </div>
 
-            <div class="things-slider snaps-inline">
+            <div class="things-slider snaps-inline">                
                 <div class="slide" id="slide-1">
-                    <img src="images/things-to-do/goat.jpeg" alt="DESCRIPTION" />
-                    <div class="slide-text"></div>
+                    <img src="images/things-to-do/goat.jpeg" alt="DESCRIPTION" >
+                    <div class="slide-text">
+                        <h3>Meet Rosie The Goat</h3>
+                        <p>During your visit, don’t miss the chance to meet Rosie, our lovable and playful goat!  
+                            She adores being fed and pampered with gentle pats, especially behind her ears.  
+                            Rosie’s sweet personality and playful head nudges are sure to make your day unforgettable.
+                        </p>
+                    </div>
                 </div>
-
 
                 <div class="slide" id="slide-2">
-                    <img src="images/things-to-do/hiking.jpg" alt="DESCRIPTION" />
-                    <div class="slide-text"></div>
+                    <img src="images/things-to-do/hiking.jpg" alt="DESCRIPTION" >
+                    <div class="slide-text">
+                        <h3>Visit the Blue Mountains</h3>
+                        <p>Step into the heart of Australia’s natural beauty with the majestic Blue Mountains right at our doorstep.  
+                            Whether you’re planning a day hike, exploring the vibrant visitor centers, or soaking in breathtaking views at iconic viewpoints,  
+                            this remarkable landscape offers unforgettable experiences for every adventurer.
+                        </p>
+                        <p>Learn more and plan your journey with Visit NSW: 
+                            <a class="booking-btn" href="https://www.visitnsw.com/destinations/blue-mountains">Visit Blue Mountains</a>
+                        </p>
+                    </div>
                 </div>
+
                 <div class="slide" id="slide-3">
-                    <img src="images/things-to-do/pool.webp" alt="DESCRIPTION" />
-                    <div class="slide-text"></div>
+                    <img src="images/things-to-do/pool.webp" alt="DESCRIPTION" >
+                    <div class="slide-text">
+                        <h3>Take a Dip in the Plunge Pool</h3>
+                        <p>After a long day of exploring, hiking, or traveling, unwind in our beatiful heater plunge pool. Allow
+                            the soothing warmth melt away your fatigue as you sink into this peaceful oasis. A complimentary bottle
+                            of wine is offered to help you enjoy the tranquil evening sky in the perfect spot to relax and recharge.
+                        </p>
+                    </div>
                 </div>
             </div>
-
 
             <div class="slider-nav">
                 <a href="#slide-1"></a>
                 <a href="#slide-2"></a>
                 <a href="#slide-3"></a>
             </div>
-
-
         </section>
-
-
-
-
-
-
-
-
 
         <section class="booking" id="booking">
             <h2>Book Now</h2>
+
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email address" required>
+                
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+                
+                <label for="from-date">From Date:</label>
+                <input type="date" id="from-date" name="from_date" required>
+                
+                <label for="to-date">To Date:</label>
+                <input type="date" id="to-date" name="to_date" required>
+                
+                <button>
+                    Submit
+                </button>
+            </form>
 
         </section>
 
@@ -221,9 +237,6 @@
             without consent of the original copyright owners. See code comments for
             references.
         </p>
-
     </footer>
-
 </body>
-
 </html>

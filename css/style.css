@@ -1,6 +1,3 @@
-/* This is a single-line comment */
-
-
 /*--------------------------FONTS-------------------------------*/
 /* Kaisei Tokumin Fonts is a Serif font used for titles and certain
 accents*/
@@ -41,7 +38,7 @@ h1, h2, h3 {
 }
 
 h2 {
-    padding: 1.7em 2em;
+    padding: 1.7em 2em 0 2em;
     font-size: 2.5em;   
 }
 
@@ -58,20 +55,14 @@ a {
     text-decoration: none;
 }
 
-.gallery, .amenities, .booking {
+.gallery, .amenities, .booking, .things-to-do {
     min-height: 60vh;
 }
 
-.things-to-do {
-    min-height: 80vh;
-
-}
-
+/*Setting the max width of content to stop stretching effect on ultrawide screens*/
 .about, .gallery, .amenities, .things-to-do, .booking, .contact{
     max-width: 1366px;
     margin:auto;
-    outline: 1px solid green;
-
 }
 
 .booking-btn {
@@ -81,18 +72,11 @@ a {
     border-radius: 1em;
     font-size: 1em;
     color: #706457;
-
 }
 
 .booking-btn:hover {
     background: transparent;
 }
-
-
-
-
-
-
 
 
 /*--------------------------HERO-------------------------------*/
@@ -102,108 +86,153 @@ a {
     height: 100svh;
     height: 100vh; 
 
+    /*Houzz. "Old Barns Become an Airy Modern Rustic Home." Accessed October 19, 2024.
+    https://www.houzz.com/magazine/houzz-tour-old-barns-become-an-airy-modern-rustic-homestsetivw-
+    vs~172078646. */
     background: url("../images/property/home-1.jpg");
     background-size: cover;
     background-position: center;
-
-
-
 }
 
+/*A translucent overlay is used to reduce the overwhelming effect of the highly 
+saturated photography. This allows users to still see the elements in this section*/
 .overlay{
     width: 100%;
     height: 100%;
 
-    background-color:#ebe3d770;
+    background-color:#ebe3d749;
 
-    display:flex;
+    /*Centering elements using flex*/
+    display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 
+    /*Position relative to allow absolute position of children elements */
+    position: relative;
 }
 
 .hero-logo{
     height: 50svh;
-    max-height: 50vh; 
+    height: 50vh;
+    margin-bottom: 0;
 }
 
 
+/*Bouncing effect to guide users to scroll further down the page*/
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.explore-button {
+    position: absolute;
+    bottom: 20px;
+    font-size: 2em;
+    cursor: pointer;    
+    font-family: KaiseiTokumin, Georgia, serif;
+    color:  #706457;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    animation: bounce 2s infinite;
+
+}
+
+/*Text shadow to create a subtle micro interaction and user engagement*/
+.explore-button:hover {
+    text-shadow:0 0 10px white,
+                0 0 20px white;
+}
+
+.explore-icon {
+    filter: invert(40%) sepia(7%) saturate(924%) hue-rotate(350deg) brightness(95%) contrast(88%); 
+    height: 3em;
+    padding: 0;
+    margin: 0;
+}
 
 
+@media screen and (max-width: 1366px){
+    .explore-button {
+        font-size: 1.2em; 
+    }
+}
 
 
 /*--------------------------ABOUT-------------------------------*/
 .about{
     min-height: 30vh;
-    padding-top: 4rem;
-    padding-bottom: 10rem;
+    padding: 4rem 0;
+}
 
+.about h2{
+    padding-top: 0em;
 }
 
 .about-grid{
-    margin: 1em 2em 1em 2em;
-
+    margin: 1em 2em;
     padding: 1em;
+
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2em;
-
 }
 
 .tile{
+    height:100%;
     font-size: 0.9em;
     line-height: 1.6em;
-
     text-align: center;
 
     display: flex;
-    justify-content: center; /* Align horizontally */
-    align-items: center; /* Align vertically */
+    justify-content: center;
+    align-items: center;
     text-align: center;
-
-    height:100%;
-
-
 }
 
 .middle-tile{   
-    display: flex;
-
-
-    gap:2em;
+    display: flex;    
 
     flex-direction: column; 
-        justify-content: center; /* Align horizontally */
-    align-items: center; /* Align vertically */
-
-    
-
-    
+    justify-content: center;
+    align-items: center;
+    gap:2em;    
 }
 
 .tagline{
     font-size: 2.3em;
     font-family: KaiseiTokumin, serif;
     text-align: center;
-
 }
 
 @media screen and (max-width: 900px){
     .about-grid{
         grid-template-columns: 1fr;
         gap:5em;
-
     }
 }
 
 
-
 /*--------------------------GALLERY-------------------------------*/
+/*The Gallery scroller uses overflow-x and scroll-snap to allow
+users to scroll horizontal through the images*/
 
 .gallery-scroller{
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 65%;
+    grid-auto-columns: 65%; /*Column size set to 65% to allow the next image to peek
+    through and guide the user to scroll further*/
 
     overflow-x:auto;
     overscroll-behavior-inline: contain;
@@ -225,10 +254,11 @@ a {
 
 @media screen and (max-width: 360px){
     .gallery-scroller{
-        grid-auto-columns: 80%;
+        grid-auto-columns: 90%;
     }
 }
 
+/* Utilising the positioning to stack the Gallery title on top of slider */
 .gallery{
     position: relative;
 }
@@ -244,66 +274,55 @@ a {
     text-shadow: 0px 0px 10px rgb(121, 108, 95);
 }
 
-
-
 .snaps-inline {
     scroll-snap-type: x mandatory;
 }
 
 .snaps-inline > * {
-    scroll-snap-align: center; 
-
+    scroll-snap-align: center;
 }
-
-
-
 
 
 /*--------------------------AMENITIES-------------------------------*/
 .amenities {
-    padding: 10rem 0;
+    padding: 3rem 0;
 }
 
-.amenities-grid{
+.amenities-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 2rem;
-
-
+    padding: 0 2em;
 }
 
 .image-container {
-    height: 50vh;
+    height: 70vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 
 .amenities-image {
-    height: 100%;
-    width: auto;
+    height: 70%;
     object-fit: cover;
     box-shadow: -20px -20px #C1AC96;
 }
 
 
 .amenities-info{
-    padding: 1em;
-
+    padding: 2em;
 }
 
 .amenities-info h2{
-    padding: 0 0;
-    padding-bottom: 3rem;
+    padding: 0 0 3rem 0;
 }
 
 .description {
-    font-size: 1rem;
-    color: #706457;
-    margin-bottom: 1.5rem;
+    font-size: 1em;
+    margin: 1em;
 }
 
 .info-tiles {
@@ -326,11 +345,11 @@ a {
     border: 0;
     height: 1px;
     background: #c1ac96;
-    margin: 1rem 0;
+    margin: 1em;
 }
 
 .info-tile p {
-    font-size: 1rem;
+    font-size: 1em;
     color: #706457;
     margin: 0;
 }
@@ -357,17 +376,22 @@ a {
 @media screen and (max-width: 900px) {
     .amenities-grid {
         grid-template-columns: 1fr;
+        padding: 0;
+        gap: 0
     }
 
     .image-container {
-        height: 40vh;
+        height: 50vh; 
+    }
+
+    .info-tile p {
+        font-size: 0.9em;
+    }
+
+    .right-align{
+        margin-left: 40%;
     }
 }
-
-
-
-
-
 
 
 /*--------------------------THINGS TO DO-------------------------------*/
@@ -412,25 +436,19 @@ a {
     background-color: #FFFAF6;
 }
 
-
-
-
-
 .things-slider {
-    height: 80vh;
+    height: 60vh;
 
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 100%;
+    grid-auto-columns: 100%;  /* 100% for slides to display one at a time*/
 
     overflow-x: auto;
-
     overscroll-behavior-inline: contain;
-
     scroll-behavior: smooth; 
-
 }
 
+/*Scrollbars are hidden for a cleaner look as the slider has navigation dots*/
 .things-slider::-webkit-scrollbar {
     display: none; /* Safari and Chrome */
 }
@@ -439,12 +457,9 @@ a {
     scrollbar-width: none;  /* Mozilla*/
 }
 
-
-
 .slide{
-    height: 80vh;
+    height: 60vh;
     object-fit: cover;
-
     position:relative;
 }
 
@@ -455,8 +470,8 @@ a {
     object-fit: cover;
     display: block;
 
-    position: relative; /* The default is fine, but explicitly set for clarity */
-    z-index: 0; /* Places the image below the .slide-text */
+    position: relative;
+    z-index: 0;
 }
 
 .slide-text{
@@ -469,12 +484,6 @@ a {
 
     background: rgba(193, 172, 150, 0.8);
 }
-
-
-
-
-
-
 
 /*--------------------------BOOKING-------------------------------*/
 
