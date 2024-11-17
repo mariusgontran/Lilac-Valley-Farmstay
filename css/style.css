@@ -1,57 +1,106 @@
+/* This is a single-line comment */
+
+
+/*--------------------------FONTS-------------------------------*/
+/* Kaisei Tokumin Fonts is a Serif font used for titles and certain
+accents*/
 @font-face{
     font-family: KaiseiTokumin;
     src: url(../fonts/KaiseiTokumin-Regular.ttf);
 }
 
+/* MontSerrat is a Sans Serif font used for bodies of text*/
 @font-face{
     font-family: MontSerrat;
     src: url(../fonts/Montserrat-Regular.ttf);
 }
 
-
 /*--------------------------BODY-------------------------------*/
 
+body {
+    outline: 1px solid red;
+}
+* {
+    outline: 1px solid purple; /* Highlight all elements to find the culprit */
+}
+
 body, html {
+    /*Settings defaults values for the page*/
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-
     background: #EBE3D7;
     color:  #706457;
+    font-family: MontSerrat, Arial, sans-serif;
 
-    font-family: MontSerrat, sans-serif;
-
-    scroll-behavior: smooth;
+    /*Smooth scroll allows using anchor links with
+    smooth scrolling down to required section*/
+    scroll-behavior: smooth; 
+    -webkit-scroll-behavior: smooth; /* Safari */
 }
 
-h1, h2, h3 {
-    font-family: KaiseiTokumin, sans-serif;
-    color:  #C1AC96;
+
+h1, h2, h3 {    
+    font-weight: normal; /*Removing the default bold weight on titles*/
+    padding: 0;
+    margin: 0;
+    font-family: KaiseiTokumin, Georgia, serif;
+    color:  #706457;
 }
 
 h2 {
-    font-size: 2em;
-    padding-left: 2em;
+    padding: 1.7em 2em;
+    font-size: 2.5em;   
+}
+
+/*Media query for adjusting the spacing around titles on small screens*/
+@media screen and (max-width: 900px){
+    h2{
+        padding-top:1em;
+        font-size: 2em;
+        padding-left: 1em;
+    }
 }
 
 a {
     text-decoration: none;
 }
 
-a :hover{
-    color: blue;
-
+.gallery, .amenities, .booking {
+    min-height: 60vh;
 }
 
-.gallery, .amenities, .things-to-do, .booking {
-    min-height: 60vh;
+.things-to-do {
+    min-height: 80vh;
+
 }
 
 .about, .gallery, .amenities, .things-to-do, .booking, .contact{
     max-width: 1366px;
     margin:auto;
-    border: solid 1px blue;
+    outline: 1px solid green;
+
 }
+
+.booking-btn {
+    background: linear-gradient(#F9C36D, #ffb237);
+    border: solid 2px #F9C36D;
+    padding: 0.5em 2em;
+    border-radius: 1em;
+    font-size: 1em;
+    color: #706457;
+
+}
+
+.booking-btn:hover {
+    background: transparent;
+}
+
+
+
+
+
+
 
 
 /*--------------------------HERO-------------------------------*/
@@ -78,20 +127,82 @@ a :hover{
     display:flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 
 }
 
 .hero-logo{
     height: 50svh;
+    max-height: 50vh; 
 }
+
+
+
+
 
 
 /*--------------------------ABOUT-------------------------------*/
 .about{
     min-height: 30vh;
+    padding-top: 4rem;
+    padding-bottom: 10rem;
+
 }
 
+.about-grid{
+    margin: 1em 2em 1em 2em;
+
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2em;
+
+}
+
+.tile{
+    font-size: 0.9em;
+    line-height: 1.6em;
+
+    text-align: center;
+
+    display: flex;
+    justify-content: center; /* Align horizontally */
+    align-items: center; /* Align vertically */
+    text-align: center;
+
+    height:100%;
+
+
+}
+
+.middle-tile{   
+    display: flex;
+
+
+    gap:2em;
+
+    flex-direction: column; 
+        justify-content: center; /* Align horizontally */
+    align-items: center; /* Align vertically */
+
+    
+
+    
+}
+
+.tagline{
+    font-size: 2.3em;
+    font-family: KaiseiTokumin, serif;
+    text-align: center;
+
+}
+
+@media screen and (max-width: 900px){
+    .about-grid{
+        grid-template-columns: 1fr;
+        gap:5em;
+
+    }
+}
 
 
 
@@ -111,7 +222,6 @@ a :hover{
 .gallery-element {
     height:60vh;
     object-fit: cover;
-    border: solid 1px blue;
 }
 
 .gallery-element img{
@@ -158,6 +268,110 @@ a :hover{
 
 
 /*--------------------------AMENITIES-------------------------------*/
+.amenities {
+    padding: 10rem 0;
+}
+
+.amenities-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+
+
+}
+
+.image-container {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.amenities-image {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    box-shadow: -20px -20px #C1AC96;
+}
+
+
+.amenities-info{
+    padding: 1em;
+
+}
+
+.amenities-info h2{
+    padding: 0 0;
+    padding-bottom: 3rem;
+}
+
+.description {
+    font-size: 1rem;
+    color: #706457;
+    margin-bottom: 1.5rem;
+}
+
+.info-tiles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-tile {
+    text-align: center;
+    flex: 1;
+}
+
+.amenities-icons {
+    filter: invert(40%) sepia(7%) saturate(924%) hue-rotate(350deg) brightness(95%) contrast(88%); 
+    height: 3rem;
+}
+
+.separator {
+    border: 0;
+    height: 1px;
+    background: #c1ac96;
+    margin: 1rem 0;
+}
+
+.info-tile p {
+    font-size: 1rem;
+    color: #706457;
+    margin: 0;
+}
+
+.amenities-list {
+    list-style: circle;
+    padding: 2em;
+    color: #706457;
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+.amenities-list li {
+    margin-bottom: 0.5rem;
+}
+
+
+.right-align{
+    display:inline-block;
+    margin-left: 66%;
+}
+
+
+@media screen and (max-width: 900px) {
+    .amenities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .image-container {
+        height: 40vh;
+    }
+}
+
 
 
 
@@ -181,7 +395,7 @@ a :hover{
 
 .slider-nav{
     display: flex;
-    column-gap: 1rem;
+    gap: 2rem;
     position: absolute;
     bottom: 1.25rem;
     left: 50%;
@@ -189,9 +403,29 @@ a :hover{
     z-index: 1;
 }
 
+.slider-nav a{
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+
+    border: solid 3px #FFFAF6;
+    text-shadow: 0px 0px 10px rgb(121, 108, 95);
+
+    opacity: 0.75;
+    transition: opacity ease-in-out 250ms;
+}
+
+.slider-nav a:hover{
+    opacity: 1;
+    background-color: #FFFAF6;
+}
+
+
+
+
 
 .things-slider {
-    height: 70vh;
+    height: 80vh;
 
     display: grid;
     grid-auto-flow: column;
@@ -201,19 +435,23 @@ a :hover{
 
     overscroll-behavior-inline: contain;
 
-    border: solid 1px green;
+    scroll-behavior: smooth; 
+
 }
 
 .things-slider::-webkit-scrollbar {
     display: none; /* Safari and Chrome */
 }
 
+.things {
+    scrollbar-width: none;  /* Mozilla*/
+}
+
 
 
 .slide{
-    height: 70vh;
+    height: 80vh;
     object-fit: cover;
-    border: solid 1px red;
 
     position:relative;
 }
@@ -253,6 +491,26 @@ a :hover{
 
 
 /*--------------------------CONTACT-------------------------------*/
+
+
+
+/*--------------------------FOOTER-------------------------------*/
+footer {
+    width: 100%;
+    background-color: #FFFAF6;
+    color: #C1AC96;
+
+    margin: 0;
+    padding: 0;
+}
+
+footer p{
+    margin: 0 auto 0 auto;
+    padding: 1em;
+    max-width: 900px;
+    text-align: justify;
+    font-style: italic;
+}
 
 
 

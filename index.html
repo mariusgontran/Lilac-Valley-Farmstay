@@ -2,134 +2,193 @@
 <!doctype html>
 <!-- Specifies the language of the website as English to help search engine optimisation and screen readers -->
 <html lang="en">
-    <!-- Head contains information about the webpage not visible to the user on the page -->
-    <head> 
-        <!-- Allows set of characters addtional to standard ASCII characters to be used on website -->
-        <meta charset="utf-8">  
-        <!-- Viewport meta tag allows controlling size of the viewport for responsive design  -->   
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Head contains information about the webpage not visible to the user on the page -->
 
-        <!-- Title of webpage to be display on browser bar -->     
-        <title>Lilac Valley Farm Stay</title> 
+<head>
+    <!-- Allows set of characters addtional to standard ASCII characters to be used on website -->
+    <meta charset="utf-8">
+    <!-- Viewport meta tag allows controlling size of the viewport for responsive design  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <meta name="author" content="Add Your Name Here">
-        <meta name="description" content="Add a description of your website here">
-        <meta name="keywords" content="Add keywords that people might search when looking for your site, with commas, to seperate them">
+    <!-- Title of webpage to be display on browser bar -->
+    <title>Lilac Valley Farm Stay</title>
 
-        <!-- Linking external stylesheet using relative path to it  -->         
-        <link rel="stylesheet" href="css/style.css">     
-        
-        <link rel="icon" href="place-your-tab-icon-here.jpg"> 
-    </head>
+    <meta name="author" content="Add Your Name Here">
+    <meta name="description" content="Add a description of your website here">
+    <meta name="keywords"
+        content="Add keywords that people might search when looking for your site, with commas, to seperate them">
 
-    <!-- Body contains all the visible content of the webapge, subdivided in different sections -->
-    <body>
-        <!-- The header section contains the upper part of the page, usually containing navigation, company logo, etc. Typically this will stay
-         fixed across all pages of the website for user to easily navigate -->
-        <header>
+    <!-- Linking external stylesheet using relative path to it  -->
+    <link rel="stylesheet" href="css/style.css">
 
-        </header>  
+    <link rel="icon" href="place-your-tab-icon-here.jpg">
+</head>
 
-        <main>
-            <section class="hero">
-                <div class="overlay">
-                    <a href="#booking">Book Now</a>
+<!-- Body contains all the visible content of the webpage, subdivided in different sections -->
 
-                    <img class="hero-logo" src="images/logo/logo.svg" alt="Lilac Valley Farm Stay logo"/>
-    
-                    <a href="#about">Explore</a>
+<body>
+    <main>
+        <section class="hero">
+            <div class="overlay">
+                <img class="hero-logo" src="images/logo/logo.svg" alt="Lilac Valley Farm Stay logo" />
+
+                <a href="#about">Explore</a>
+            </div>
+
+
+
+
+        </section>
+
+        <section class="about" id="about">
+            <h2>About</h2>
+
+            <div class="about-grid">
+                <div class="tile"> Discover Lilac Valley Farm Stay—a serene escape nestled amidst the stunning, rolling
+                    hills of the
+                    Blue Mountains.
+                    This luxurious open-plan barn house sits on 4 acres of tranquil land, offering the perfect blend of
+                    comfort,
+                    modern amenities, and unforgettable family-friendly entertainment.</div>
+
+                <div class="middle-tile">
+                    <div class="tagline">Your Luxury Rustic Escape </div>
+                    <a href="#amenities" class="booking-btn">Learn More</a>
+                </div>
+
+                <div class="tile"> Meticulously transformed by renowned interior designer Marina Ye over three dedicated
+                    years,
+                    Lilac Valley Farm Stay invites you to unwind and recharge in unparalleled style.
+                    Highly sought after and featured in several online travel and lifestyle articles, this dream retreat
+                    is waiting
+                    for you!
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="gallery">
+            <div class="gallery-title-wrapper">
+                <h2>Gallery</h2>
+            </div>
+
+
+
+            <div class="gallery-scroller snaps-inline">
+                <div class="gallery-element">
+                    <img src="images/property/home-8.jpg" alt="DESCRIPTION" />
+                </div>
+                <div class="gallery-element">
+                    <img src="images/property/home-7.jpg" alt="DESCRIPTION" />
+                </div>
+                <div class="gallery-element">
+                    <img src="images/property/home-6.jpg" alt="DESCRIPTION" />
+                </div>
+                <div class="gallery-element">
+                    <img src="images/property/home-4.jpg" alt="DESCRIPTION" />
+                </div>
+                <div class="gallery-element">
+                    <img src="images/property/home-3.jpg" alt="DESCRIPTION" />
+                </div>
+                <div class="gallery-element">
+                    <img src="images/property/home-2.jpg" alt="DESCRIPTION" />
+                </div>
+                <div class="gallery-element">
+                    <img src="images/property/home-1.jpg" alt="DESCRIPTION" />
+                </div>
+            </div>
+
+        </section>
+
+        <section class="amenities" id="amenities">
+            <div class="amenities-grid">
+                <div class="image-container">
+                    <img class="amenities-image" src="images/property/home-5.jpg" alt="DESCRIPTION" />
                 </div>
 
 
+                <div class="amenities-info">
+                    <h2>Amenities</h2>
+
+                    <p class="description">Fully equipped to cater your needs in absolute comfort and luxury.</p>
+
+                    <hr class="separator" />
+
+                    <div class="info-tiles">
+                        <div class="info-tile">
+                            <img src="images/icons/guests.svg" class="amenities-icons" alt="DESCRIPTION" />
+                            <p>Up to 6 guests</p>
+                        </div>
+                        <div class="info-tile">
+                            <img src="images/icons/bed.svg" class="amenities-icons" alt="DESCRIPTION" />
+                            <p>3 bedrooms</p>
+                        </div>
+                        <div class="info-tile">
+                            <img src="images/icons/bath.svg" class="amenities-icons" alt="DESCRIPTION" />
+                            <p>2 bathrooms</p>
+                        </div>
+                    </div>
+
+                    <hr class="separator" />
+                    
+                    <ul class="amenities-list">
+                        <li>King size master bedroom with ensuite</li>
+                        <li>Two charming bedrooms with bunk beds</li>
+                        <li>Ducted heating and cooling for year round comfort</li>
+                        <li>Modern kitchen with appliances</li>
+                        <br>
+                        <li>Four acres of peaceful private land</li>
+                        <li>Hand feed friendly farm animals</li>
+                        <li>Private heated plunge pool</li>
+                        <li>Beautiful cottage garden</li>
+                        <li>Cozy fireplace for chilly nights</li>
+                    </ul>
 
 
-            </section>
+                    <a href="#booking" class="right-align booking-btn">Book Now</a>
 
-            <section class="about" id="about">
-                <h2>About</h2>
-
-                <p>
-                    Welcome to Lilac Valley Farm Stay, a quiet retreat surrounded by the breathtaking hills of the Blue Mountains. 
-                    The property consists of an open plan, luxury barn house surrounded by 4 acres of quiet and peaceful land with 
-                    all the amenities you need and the entertainment for your family.
-                </p>
-
-                
+                </div>          
+ 
+            </div>
+            
 
 
 
-            </section>
 
+        </section>
 
-            <section class="gallery">
-                <div class="gallery-title-wrapper">
-                    <h2>Gallery</h2>
+        <section class="things-to-do">
+            <div class="things-title-wrapper">
+                <h2>Things to do</h2>
+            </div>
+
+            <div class="things-slider snaps-inline">
+                <div class="slide" id="slide-1">
+                    <img src="images/things-to-do/goat.jpeg" alt="DESCRIPTION" />
+                    <div class="slide-text"></div>
                 </div>
 
 
-
-                <div class="gallery-scroller snaps-inline">
-                    <div class="gallery-element">
-                        <img src="images/property/home-8.jpg" alt="DESCRIPTION"/>
-                    </div>
-                    <div class="gallery-element">
-                        <img src="images/property/home-7.jpg" alt="DESCRIPTION"/>
-                    </div>
-                    <div class="gallery-element">
-                        <img src="images/property/home-6.jpg" alt="DESCRIPTION"/>
-                    </div>
-                    <div class="gallery-element">
-                        <img src="images/property/home-4.jpg" alt="DESCRIPTION"/>
-                    </div>
-                    <div class="gallery-element">
-                        <img src="images/property/home-3.jpg" alt="DESCRIPTION"/>
-                    </div>
-                    <div class="gallery-element">
-                        <img src="images/property/home-2.jpg" alt="DESCRIPTION"/>
-                    </div>
-                    <div class="gallery-element">
-                        <img src="images/property/home-1.jpg" alt="DESCRIPTION"/>
-                    </div>
+                <div class="slide" id="slide-2">
+                    <img src="images/things-to-do/hiking.jpg" alt="DESCRIPTION" />
+                    <div class="slide-text"></div>
                 </div>
-
-            </section>
-
-            <section class="amenities">
-                <h2>Amenities</h2>
-
-            </section>
-
-            <section class="things-to-do">
-                <div class="things-title-wrapper">
-                    <h2>Things to do</h2>
+                <div class="slide" id="slide-3">
+                    <img src="images/things-to-do/pool.webp" alt="DESCRIPTION" />
+                    <div class="slide-text"></div>
                 </div>
-
-                <div class="things-slider snaps-inline">
-                    <div class="slide" id="slide-1">
-                        <img src="images/things-to-do/goat.jpeg" alt="DESCRIPTION"/>
-                        <div class="slide-text"></div>                            
-                    </div>
+            </div>
 
 
-                    <div class="slide" id="slide-2">
-                        <img src="images/things-to-do/hiking.jpg" alt="DESCRIPTION"/>                        
-                        <div class="slide-text"></div>    
-                    </div>
-                    <div class="slide" id="slide-3">
-                        <img src="images/things-to-do/pool.webp" alt="DESCRIPTION"/>
-                        <div class="slide-text"></div>  
-                    </div>
-                </div>
+            <div class="slider-nav">
+                <a href="#slide-1"></a>
+                <a href="#slide-2"></a>
+                <a href="#slide-3"></a>
+            </div>
 
 
-                <div class="slider-nav">
-                    <a href="#slide-1">1</a>
-                    <a href="#slide-2">2</a>
-                    <a href="#slide-3">3</a>
-                </div>
-
-
-            </section>
+        </section>
 
 
 
@@ -139,21 +198,32 @@
 
 
 
-            <section class="booking" id="booking">
-                <h2>Book Now</h2>
+        <section class="booking" id="booking">
+            <h2>Book Now</h2>
 
-            </section>
+        </section>
 
-            <section class="contact">
-                <h2>Contact Us</h2>
+        <section class="contact">
+            <h2>Contact Us</h2>
 
-            </section>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300785.4239514079!2d150.28954608850006!3d-33.59905536024222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12796427bd7755%3A0xf017d68f9f2c3a0!2sBlue%20Mountains%20National%20Park!5e0!3m2!1sen!2sau!4v1731818231031!5m2!1sen!2sau" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-        </main> 
+        </section>
 
-        <footer>
+    </main>
 
-        </footer>
+    <footer>
+        <p>This website has been created as part of an assignment in an approved course
+            of study for Curtin University and contains copyright material not created by
+            the author. All copyright material used remains copyright of the respective
+            owners and has been used here pursuant to Section 40 of the Copyright Act
+            1968 (Commonwealth of Australia). No part of this work may be reproduced
+            without consent of the original copyright owners. See code comments for
+            references.
+        </p>
 
-    </body> 
+    </footer>
+
+</body>
+
 </html>
