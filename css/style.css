@@ -60,9 +60,29 @@ a {
 }
 
 /*Setting the max width of content to stop stretching effect on ultrawide screens*/
-.about, .gallery, .amenities, .things-to-do, .booking, .contact{
+.about, .amenities {
     max-width: 1366px;
     margin:auto;
+}
+
+.content-wrapper{
+    max-width: 1366px;
+    margin:auto;
+}
+
+.light-section {
+    background-color: #FFFAF6;
+    color: #C1AC96;
+}
+
+.dark-section {
+    background-color: #C1AC96;
+    color: #FFFAF6;
+}
+
+.dark-section h2 {
+    color: #FFFAF6;
+
 }
 
 .booking-btn {
@@ -77,6 +97,8 @@ a {
 .booking-btn:hover {
     background: transparent;
 }
+
+
 
 
 /*--------------------------HERO-------------------------------*/
@@ -486,12 +508,144 @@ users to scroll horizontal through the images*/
 }
 
 /*--------------------------BOOKING-------------------------------*/
+.booking {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.booking-grid {
+    gap: 1em;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    height: 100%;
+}
+
+@media screen and (max-width: 900px) {
+    .booking-grid {
+        grid-template-columns: 1fr;
+        padding: 2;
+        gap: 0;
+    }
+    .date-row {
+        gap: 2em;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.form-container {
+    display:flex;
+    flex-direction:column;
+    gap: 2em;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
 
 
+input[type=text], input[type=email], input[type=tel] {
+    width: 100%;
+}
 
+input[type=date] {
+    padding: 0 2em;
+    font-size: 1.2em;
+}
 
+input {
+    height: 2em;
+    border: none;
+    border-bottom: 1px solid #c1ac96;
+    background: transparent;
+    color: #706457; 
+}
+
+input:after{
+    background: #c1ac96;
+}
+
+input:focus{
+    background: #FFFAF6;
+}
+
+.date-row {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 3em;
+}
+
+.booking-grid img{
+    box-shadow: 20px -20px #EBE3D7;
+}
+
+.booking-grid > .image-container {
+    width: 100%;
+}
+
+.form-container > .booking-btn {
+    width: 50%;
+    align-self: center;
+    font-size: 1.2em;
+}
 
 /*--------------------------CONTACT-------------------------------*/
+.contact-flex{
+    padding: 5em 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contact-left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.contact-left img {
+    filter: brightness(0) saturate(100%) invert(96%) sepia(36%) saturate(680%) hue-rotate(292deg) brightness(111%) contrast(101%);
+}
+
+.contact-logo {
+    height: 10em;
+}
+
+.contact-icon {
+    height: 3em;
+    padding: 1em 1em;
+    transition: opacity ease-in-out 250ms;
+}
+
+.contact-right {
+    width: 100%;
+    height: 400px;
+}
+
+.map{
+    width:100%; 
+    height:100%;
+}
+
+@media screen and (max-width: 900px) {
+    .contact-flex{
+        flex-direction: column;
+    }
+}
+
+
+
+.contact-icon:hover {
+    filter: brightness(0) saturate(100%) invert(91%) sepia(7%) saturate(558%) hue-rotate(335deg) brightness(106%) contrast(84%);
+}
+
+
+
+
+
 
 
 
@@ -512,6 +666,8 @@ footer p{
     text-align: justify;
     font-style: italic;
 }
+
+
 
 
 
