@@ -281,20 +281,36 @@ users to scroll horizontal through the images*/
 }
 
 /* Utilising the positioning to stack the Gallery title on top of slider */
-.gallery{
+.gallery .content-wrapper{
     position: relative;
 }
 
 .gallery-title-wrapper{
     position: absolute;
     z-index: 1; /* Ensures the title appears above the images */
-
 }
 
 .gallery h2{
     color: #FFFAF6;
     text-shadow: 0px 0px 10px rgb(121, 108, 95);
 }
+
+.gallery-chevron {
+    position: absolute;
+    padding: 0 0.2em;
+    top: 50%;    
+    height: 3em;    
+    filter: brightness(0) saturate(100%) invert(88%) sepia(17%) saturate(301%) hue-rotate(316deg) brightness(111%) contrast(103%);
+    opacity: 0.90;
+}
+.left {
+    left: 0%;
+}
+
+.right {
+    right:0%;
+}
+
 
 .snaps-inline {
     scroll-snap-type: x mandatory;
@@ -496,15 +512,63 @@ users to scroll horizontal through the images*/
     z-index: 0;
 }
 
+h3 {
+    color: #FFFAF6;
+
+}
+
 .slide-text{
+    line-height: 1.5em;
     position: absolute;
     bottom: 10%;
     left: 5%;
     z-index: 1;
-    height: 50%;
+    height: fit-content;
+    padding: 1em 1em;
     width: 30%;
 
     background: rgba(193, 172, 150, 0.8);
+}
+
+.text-2{
+    bottom: 10%;
+    left: 60%;
+}
+
+
+.slide-text > .booking-btn {
+
+}
+
+@media screen and (max-width: 1024px) {
+    .things, .things-slider, .slide {
+        height: 80vh;
+
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .things, .things-slider, .slide {
+        height: 80vh;
+
+    }
+
+
+    .slide-text{
+        line-height: 1.5em;
+        font-size: 0.9em;
+        width: 80%;
+    }
+
+    .text
+
+    .text-2, .slide-text {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+
 }
 
 /*--------------------------BOOKING-------------------------------*/
@@ -595,6 +659,7 @@ input:focus{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    gap: 2em;
 }
 
 .contact-left {
@@ -666,6 +731,10 @@ footer p{
     text-align: justify;
     font-style: italic;
 }
+
+
+
+
 
 
 
