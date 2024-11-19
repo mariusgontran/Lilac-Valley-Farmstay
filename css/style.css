@@ -247,8 +247,14 @@ saturated photography. This allows users to still see the elements in this secti
 
 
 /*--------------------------GALLERY-------------------------------*/
+/*Horizontally gallery scroller adapted from Kevin Powell "Create
+a Horizontal Media Scroller with CSS", viewed 13 November 2024,
+https://youtu.be/3yfswsnD2sw?si=DHFHC4J6npC01QLC */
+
 /*The Gallery scroller uses overflow-x and scroll-snap to allow
 users to scroll horizontal through the images*/
+
+
 
 .gallery-scroller{
     display: grid;
@@ -433,6 +439,10 @@ users to scroll horizontal through the images*/
 
 
 /*--------------------------THINGS TO DO-------------------------------*/
+/* Things to do slider adapted from Skillthrive "HTML and CSS Project 
+Tutorial: Pure CSS Image Slider", viewed November 17 2024:
+https://youtu.be/McPdzhLRzCg?si=J9UiAn1DHpnMAEsm */
+
 .things-to-do{
     position: relative;
 }
@@ -501,7 +511,6 @@ users to scroll horizontal through the images*/
     position:relative;
 }
 
-
 .slide img{
     width: 100%;
     height: 100%;
@@ -535,11 +544,6 @@ h3 {
     left: 60%;
 }
 
-
-.slide-text > .booking-btn {
-
-}
-
 @media screen and (max-width: 1024px) {
     .things, .things-slider, .slide {
         height: 80vh;
@@ -566,9 +570,6 @@ h3 {
         left: 50%;
         transform: translateX(-50%);
     }
-
-
-
 }
 
 /*--------------------------BOOKING-------------------------------*/
@@ -588,7 +589,7 @@ h3 {
 @media screen and (max-width: 900px) {
     .booking-grid {
         grid-template-columns: 1fr;
-        padding: 2;
+        padding: 2em;
         gap: 0;
     }
     .date-row {
@@ -606,7 +607,6 @@ h3 {
     justify-content: space-evenly;
     align-items: stretch;
 }
-
 
 input[type=text], input[type=email], input[type=tel] {
     width: 100%;
@@ -701,18 +701,9 @@ input:focus{
     }
 }
 
-
-
 .contact-icon:hover {
     filter: brightness(0) saturate(100%) invert(91%) sepia(7%) saturate(558%) hue-rotate(335deg) brightness(106%) contrast(84%);
 }
-
-
-
-
-
-
-
 
 /*--------------------------FOOTER-------------------------------*/
 footer {
@@ -731,16 +722,4 @@ footer p{
     text-align: justify;
     font-style: italic;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
